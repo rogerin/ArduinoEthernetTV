@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+
+	<title>Rastreamento Correios</title>
+
+</head>
+<body>
+	<div class="well">
+		<p>
+			<span class="span2">Luz 1</span>
+			<a href="http://192.168.1.177/luz1on" class="btn btn-success"> Liga </a> 
+			<a href="http://192.168.1.177/luz1off" class="btn btn-danger"> Desliga </a> 
+		</p>
+		<hr />
+		<p>
+			<span class="span2">Luz 2</span>
+			<a href="http://192.168.1.177/luz2on" class="btn btn-success"> Liga </a> 
+			<a href="http://192.168.1.177/luz2off" class="btn btn-danger"> Desliga </a> 
+		</p>
+		<hr />
+		<p>
+			<span class="span2">Ventilador</span>
+			<a href="http://192.168.1.177/ventiladoron" class="btn btn-success"> Liga </a> 
+			<a href="http://192.168.1.177/ventiladoroff" class="btn btn-danger"> Desliga </a> 
+		</p>
+		<hr />
+
+		<p>
+			<span class="span2">TV</span>
+			<a href="http://192.168.1.177/tvonoff" class="btn"><i class="icon-off"></i></a>
+			<a href="http://192.168.1.177/cmenos" class="btn"><i class="icon-chevron-left"></i></a>
+			<a href="http://192.168.1.177/cmais" class="btn"><i class="icon-chevron-right"></i></a>
+			<a href="http://192.168.1.177/vmenos" class="btn"><i class="icon-chevron-down"></i></a>
+			<a href="http://192.168.1.177/vmais" class="btn"><i class=" icon-chevron-up"></i></a>
+			
+
+		</p>
+		<hr />
+
+
+		
+
+	</div>
+
+	<div id="resultado"></div>
+
+
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('a').click(function(){
+		var url = $(this).attr('href');
+		
+		$("#resultado").load(url);
+		return false;
+	});
+
+});
+</script>
+
+</body>
+</form>
